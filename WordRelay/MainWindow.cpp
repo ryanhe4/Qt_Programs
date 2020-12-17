@@ -20,9 +20,8 @@ MainWindow::MainWindow(QMainWindow* parent)
 
 MainWindow::~MainWindow() noexcept
 {
-    delete ui;
-    delete message_box;
 }
+
 void MainWindow::slot_btn()
 {
     // get quest and answer text

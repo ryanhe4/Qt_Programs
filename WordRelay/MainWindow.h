@@ -8,6 +8,7 @@
 #include <QDebug>
 #include <QMessageBox>
 #include <QKeyEvent>
+#include <memory>
 
 namespace Ui {
 class MainWindow;
@@ -24,9 +25,8 @@ public:
 public slots: // One of EventHandller
     void slot_btn();
 private:
-    Ui::MainWindow *ui;
-    QMessageBox *message_box;
-
+    std::unique_ptr<Ui::MainWindow> ui;
+    std::unique_ptr<QMessageBox> message_box;
 };
 
 #endif //IMAGESPRITE_MAINWINDOW_H
